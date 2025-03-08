@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Update package list and install required dependencies
+sudo apt update && sudo apt install -y ca-certificates curl apt-transport-https lsb-release gnupg
+
+# Add Microsoft GPG key
+curl -sL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+
+# Add Azure CLI repository
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
+# Install Azure CLI
+sudo apt update && sudo apt install -y azure-cli
+
+# Verify installation
+az --version
