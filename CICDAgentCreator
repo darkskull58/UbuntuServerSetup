@@ -3,6 +3,6 @@
 wget -O vsts-agent-linux-x64-4.251.0.tar.gz "https://vstsagentpackage.azureedge.net/agent/4.251.0/vsts-agent-linux-x64-4.251.0.tar.gz"
 
 mkdir -p myagent && cd myagent
-tar zxvf ~/Downloads/vsts-agent-linux-x64-4.251.0.tar.gz
+tar zxvf ~/UbuntuServerSetup/vsts-agent-linux-x64-4.251.0.tar.gz
 ./config.sh
 
