@@ -1,0 +1,4 @@
+sudo apt update && sudo apt install -y ca-certificates curl
+curl -fsSL https://get.docker.com | sudo bash
+sudo systemctl enable --now docker
+docker --version
